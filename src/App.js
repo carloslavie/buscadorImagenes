@@ -27,6 +27,10 @@ function App() {
     guardarTotalPaginas(calcularTotalPaginas)
     }
     consultarApi();
+
+    //Mover la pantalla hacia arriba
+  const jumbotron = document.querySelector('.jumbotron');
+  jumbotron.scrollIntoView({behavior: 'smooth'})
     
   }, [busqueda, paginaactual])
 
@@ -48,9 +52,7 @@ function App() {
     guardarPaginaActual(nuevaPaginaActual);
   }
 
-  //Mover la pantalla hacia arriba
-  const jumbotron = document.querySelector('.jumbotron');
-  jumbotron.scrollIntoView({behavior: 'smooth'})
+  
   
   return (
     <div className="container">
